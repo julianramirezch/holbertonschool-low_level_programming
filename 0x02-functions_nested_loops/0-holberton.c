@@ -8,10 +8,10 @@ int main(void)
 {
 	char j[10] = "Holberton\n";
 	int u;
-	
+
 	for (u = 0 ; u <= 10 ; u++)
-	{	
-		_putchar(j[u]);
+	{
+	_putchar(j[u]);
 	}
 
 	return (0);
