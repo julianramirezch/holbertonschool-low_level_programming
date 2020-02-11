@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
+
 /**
  * print_last_digit - prints the las digit of number
  * @j: Integer
