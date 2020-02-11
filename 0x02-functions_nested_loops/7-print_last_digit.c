@@ -3,7 +3,7 @@
 /**
  * print_last_digit - prints the las digit of number
  * @j: Integer
- * Return: Always 0.
+ * Return: Always j.
  */
 int print_last_digit(int j)
 {
