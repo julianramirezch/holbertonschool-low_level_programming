@@ -7,16 +7,14 @@
  */
 int _abs(int j)
 {
-char u;
+
 if (j < 0)
 {
-	u = j * (-1);
-	_putchar(u);
+	j = j * (-1);
+	return (j);
 }
-else if (j > 0)
+else
 {
-	u = j * 1;
-	_putchar(u);
+return (j);
 }
-return (u);
 }
