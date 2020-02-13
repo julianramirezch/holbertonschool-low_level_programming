@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -9,24 +8,25 @@
 int main(void)
 {
 int j;
-for (j = 0 ; j <= 100 ; j++)
+for (j = 1 ; j <= 100 ; j++)
 {
-	if ((j % 3) == 0)
+	if (j != 1 )
 	{
-		printf("Fizz ");
+		printf(" ");
 	}
-	else if ((j % 5) == 0)
+	if (j % 3 == 0)
 	{
-		printf("Buzz ");
+		printf("Fizz");
 	}
-	else if (((j % 3) == 0) && ((j % 5) == 0))
+	if (j % 5 == 0)
 	{
-		printf("FizzBuzz ");
+		printf("Buzz");
 	}
-	else
+	if (!(((j % 3) == 0) || ((j % 5) == 0)))
 	{
-		printf("%d ", j);
+		printf("%d", j);
 	}
 }
-	return (0);
+ 		printf("\n");	
+return (0);
 }
