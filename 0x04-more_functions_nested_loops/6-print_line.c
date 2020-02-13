@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-0 * print_line - function that draws a straight line in the terminal.
+ * print_line - function that draws a straight line in the terminal.
  * @n: integer
  *Return: 1 or 0
  */
