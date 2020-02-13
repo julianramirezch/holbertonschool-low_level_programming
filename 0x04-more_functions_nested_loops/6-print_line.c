@@ -19,5 +19,4 @@ for (j = 0 ; j <= n ; j++)
 		_putchar(95);
 }
 	_putchar('\n');
-	
 }
