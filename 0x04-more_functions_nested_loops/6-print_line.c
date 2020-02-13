@@ -18,7 +18,7 @@ for (j = 0 ; j <= n ; j++)
 	{
 		_putchar('\n');
 	}
-	_putchar(95);
+	_putchar('_');
 }
 	_putchar('\n');
 }
