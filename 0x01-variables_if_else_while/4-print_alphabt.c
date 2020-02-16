@@ -11,7 +11,7 @@ int main(void)
 char j = 97;
 while (j >= 97 && j <= 122)
 {
-	if ( j != 101 && j != 113)
+	if (j != 101 && j != 113)
 	{
 		putchar(j);
 	}
