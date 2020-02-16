@@ -2,7 +2,6 @@
 
 /**
  * main - void
- *
  * Return: Always 0.
  */
 
