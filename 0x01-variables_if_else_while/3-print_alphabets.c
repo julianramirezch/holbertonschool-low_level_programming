@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ * main - void.
  * Return: Always 0.
  */
 
