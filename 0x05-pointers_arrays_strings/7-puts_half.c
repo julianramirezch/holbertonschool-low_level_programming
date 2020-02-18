@@ -19,7 +19,7 @@ if (!(j % 2 == 0))
 {
 	j = j + 1;
 }
-for (u = (j / 2) ; u < j  ; u++)
+for (u = (j / 2) ; *(str + u) != '\0'  ; u++)
 {
 	_putchar(*(str + u));
 }
