@@ -15,11 +15,15 @@ int u;
 for (j = 0 ; *(str + j) != '\0' ; j++)
 {
 }
-if (!(j % 2 == 0))
+if (j % 2 == 0)
 {
-	j = j - 1;
+	j = (j / 2);
 }
-for (u = (j / 2) ; u < j  ; u++)
+else
+{
+	j = (j - 1) / 2;
+}
+for (u = (j) ; u < j  ; u++)
 {
 	_putchar(*(str + u));
 }
