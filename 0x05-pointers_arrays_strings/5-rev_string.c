@@ -11,20 +11,16 @@ void rev_string(char *s)
 {
 int j;
 int u;
-char a[10];
+char i;
 for (u = 0 ; *(s + u) != '\0' ; u++)
 {
-	*(a + u) = s[u];
 }
-for (j = u   ; j >= 0 ; j--)
+u--;
+for (j = 0   ; j < u ; j++)
 {
-	if (j == u)
-	{
-		continue;
-	}
-	else
-	{
-		*(s + ((u - 1) - j)) = a[j];
-	}
+	i = *(s + u);
+	*(s + u) = *(s + j);
+	*(s + j) = i;
+	u--;
 }
 }
