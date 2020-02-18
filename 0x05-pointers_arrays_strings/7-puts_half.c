@@ -15,9 +15,19 @@ int u;
 for (j = 0 ; *(str + j) != '\0' ; j++)
 {
 }
-for (u = (j / 2) ; u < j  ; u++)
+if (j % 2 == 0)
 {
-	_putchar(*(str + u));
+	for (u = (j / 2) ; u < j  ; u++)
+	{
+		_putchar(*(str + u));
+	}
+}
+else
+{
+	for (u = ((j - 1) / 2) ; u < j ; u++)
+	{
+		_putchar(*(str + u));
+	}
 }
 _putchar('\n');
 }
