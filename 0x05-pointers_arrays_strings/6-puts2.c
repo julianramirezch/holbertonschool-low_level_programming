@@ -8,14 +8,14 @@
  */
 
 void puts2(char *str)
-{ 
+{
 int u;
 int l;
 
 for (u = 0 ; *(str + u) != '\0' ; u++)
 {
 }
-for(l = 0 ; l < u ; l += 2)
+for (l = 0 ; l < u ; l += 2)
 {
 	_putchar(*(str + l));
 }
