@@ -3,7 +3,7 @@
 
 /**
  * puts_half - function that prints half o a string.
- * @str: Char
+ * @str: Char.
  * Return: Always 0.
  */
 
