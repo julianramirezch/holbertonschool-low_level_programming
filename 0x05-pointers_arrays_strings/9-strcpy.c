@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * *_strcpy - function that copies the string pointed to by src,including '\0' in dest.
+ * _strcpy - function that copies the string pointed to by src,including '\0'.
  * @dest: Char.
  * @src: char.
  * Return: Always 0.
@@ -21,5 +21,5 @@ for (l = 0 ; l <= u ; l++)
 	j = *(src + l);
 	*(dest + l) = j;
 }
-return(dest);
+return (dest);
 }
