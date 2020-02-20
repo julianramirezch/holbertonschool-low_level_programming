@@ -21,5 +21,5 @@ for (u = 0 ; *(s + u) != '\0' ; u++)
 		*(s + u) = *(s + u) - 32;
 	}
 }
-return(s);
+return (s);
 }
