@@ -16,10 +16,10 @@ int u;
 for (j = 0 ; *(dest + j) != '\0' ; j++)
 {
 }
-for (u = 0 ; *(src + u) != '\0' ; u++ , j++)
+for (u = 0 ; *(src + u) != '\0' ; u++ ,j++)
 {
 	*(dest + j) = *(src + u);
 }
-return(dest);
+return (dest);
 }
 
