@@ -6,7 +6,7 @@
  * @dest: Char.
  * @src: Char.
  * @n: Integer.
- * Return:
+ * Return: dest
  */
 
 char *_strncat(char *dest, char *src, int n)
@@ -17,9 +17,9 @@ int u;
 for (j = 0 ; *(dest + j) ; j++)
 {
 }
-for (u = 0 ; (u < n) && (*(src + u) != '\0') ; u++ , j++)
+for (u = 0 ; (u < n) && (*(src + u) != '\0') ; u++, j++)
 {
 	*(dest + j) = *(src + u);
 }
-return(dest);
+return (dest);
 }
