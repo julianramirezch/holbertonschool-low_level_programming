@@ -16,8 +16,13 @@ int u;
 
 j = 0;
 for (u = 0 ; (u < n) && (*(src + u) != '\0') ; u++, j++)
-		{
-		*(dest + j) = *(src + u);
-		}
+{
+	*(dest + j) = *(src + u);
+}
+for ( ; u < n ; u++)
+{
+	*(dest + u) = '\0';
+}
+
 		return (dest);
 }
