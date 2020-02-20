@@ -6,7 +6,7 @@
  * @dest: Char.
  * @src: Char.
  * @n: Integer.
- * Return: dest
+ * Return: dest.
  */
 
 char *_strncat(char *dest, char *src, int n)
