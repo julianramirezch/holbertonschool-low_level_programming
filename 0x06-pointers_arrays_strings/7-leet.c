@@ -1,3 +1,11 @@
+#include "holberton.h"
+
+/**
+ * leet - function that encode 1337.
+ * @s: Character.
+ * Return: s
+ */
+
 char *leet(char *s)
 {
 int j;
