@@ -15,7 +15,7 @@ char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 for (j = 0 ; *(s + j) != '\0' ; j++)
 {
-	for (u = 0 ; *(a + u) != '\0' ; u++)
+	for (u = 0 ; u < 52 ; u++)
 	{
 		if (*(s + j) == *(a + u))
 		{
