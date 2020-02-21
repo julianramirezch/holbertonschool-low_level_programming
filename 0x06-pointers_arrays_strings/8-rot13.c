@@ -13,13 +13,14 @@ int u;
 char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-for (j = 0 ; *(s + j) != '\0' ; j++)
+for (j = 0 ; *(s + j) ; j++)
 {
-	for (u = 0 ; u < 52 ; u++)
+	for (u = 0 ; *(a + u) ; u++)
 	{
 		if (*(s + j) == *(a + u))
 		{
 			*(s + j) = *(b + u);
+			break;
 		}
 	}
 }
