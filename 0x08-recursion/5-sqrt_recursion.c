@@ -1,17 +1,6 @@
 #include "holberton.h"
 
 /**
- * _sqrt_recursion - return the root
- * @n: integer
- * Return: integer
- */
-
-int _sqrt_recursion(int n)
-{
-	return (operation(n, 1));
-}
-
-/**
  * root - Operations and validations.
  * @n: integer
  * @m: integer
@@ -41,4 +30,15 @@ else
 {
 	return (root(n, m + 1));
 }
+}
+
+/**
+ * _sqrt_recursion - return the root
+ * @n: integer
+ * Return: integer
+ */
+
+int _sqrt_recursion(int n)
+{
+        return (root(n, 1));
 }
