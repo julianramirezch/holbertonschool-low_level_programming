@@ -3,7 +3,7 @@
 /**
  * factorial - Functrion that returns the factorial of a given number.
  * @n : Integer.
- * Returns: Function.
+ * Return: 0
  */
 
 int factorial(int n)
