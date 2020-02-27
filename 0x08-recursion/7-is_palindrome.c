@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * _strlen_recursion - check the code for Holberton School students.
- * @s: Pionter to the string
- * Return: Always 0.
+ * _strlen_recursion - Length of string.
+ * @s: Character
+ * Return: 0.
  */
 
 int _strlen_recursion(char *s)
@@ -41,7 +41,7 @@ int is_palindrome(char *s)
 {
 	int j = _strlen_recursion(s) - 1;
 
-	if (i <= 0)
+	if (j <= 0)
 		return (1);
 	else
 		return (palindrome(s, j));
