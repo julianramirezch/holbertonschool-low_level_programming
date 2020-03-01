@@ -5,7 +5,7 @@
  * main- Program that prints the minimun number of coins to make change.
  * @argc: Integer
  * @argv: Character
- * Return: Always 0.
+ * Return: 1
  */
 
 int main(int argc, char *argv[])
@@ -15,10 +15,6 @@ int change, coins;
 change = atoi(argv[1]);
 coins = 0;
 
-if (change < 0)
-{
-	printf("0\n");
-}
 
 while (change > 0)
 {
