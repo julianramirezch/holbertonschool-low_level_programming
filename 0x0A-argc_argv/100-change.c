@@ -21,7 +21,7 @@ if (argc != 2)
 	return (1);
 }
 
-if (change <= 0)
+if (change < 0)
 	printf("0\n");
 else
 {
