@@ -23,25 +23,20 @@ if (argc != 2)
 
 if (argc < 0)
 	printf("0\n");
-else
+while (change > 0)
 {
-	while (change > 0)
-	{
-		if (change >= 25)
-			change = change - 25;
-		else if (change >= 10)
-			change = change - 10;
-		else if (change >= 5)
-			change = change - 5;
-		else if (change >= 2)
-			change = change - 2;
-		else if (change >= 1)
-			change = change - 1;
-		else
-			(change = 0);
-		coins += 1;
-	}
-	printf("%i\n", coins);
+	if (change >= 25)
+		change = change - 25;
+	else if (change >= 10)
+		change = change - 10;
+	else if (change >= 5)
+		change = change - 5;
+	else if (change >= 2)
+		change = change - 2;
+	else
+		change = change - 1;
+		coins ++;
 }
+	printf("%i\n", coins);
 return (0);
 }
