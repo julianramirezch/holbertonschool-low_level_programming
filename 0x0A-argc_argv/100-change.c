@@ -15,7 +15,6 @@ int change, coins;
 change = atoi(argv[1]);
 coins = 0;
 
-
 while (change > 0)
 {
 if (argc != 2)
@@ -34,6 +33,10 @@ else if (change >= 2)
 else 
 	change = change - 1;
 coins += 1;
+}
+if (change < 0)
+{
+	printf("0\n");
 }
 printf("%i\n", coins);
 return (0);
