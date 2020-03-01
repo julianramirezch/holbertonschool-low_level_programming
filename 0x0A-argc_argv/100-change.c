@@ -35,8 +35,9 @@ else
 			change = change - 5;
 		else if (change >= 2)
 			change = change - 2;
-		else
+		else if (change >= 1)
 			change = change - 1;
+		else (change = change + 0);
 		coins += 1;
 	}
 	printf("%i\n", coins);
