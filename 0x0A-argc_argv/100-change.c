@@ -20,9 +20,6 @@ if (argc != 2)
 	printf("Error\n");
 	return (1);
 }
-
-if (argc < 0)
-	printf("0\n");
 while (change > 0)
 {
 	if (change >= 25)
@@ -35,7 +32,7 @@ while (change > 0)
 		change = change - 2;
 	else
 		change = change - 1;
-		coins ++;
+		coins++;
 }
 	printf("%i\n", coins);
 return (0);
