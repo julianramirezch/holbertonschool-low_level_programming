@@ -18,6 +18,10 @@ char *str_concat(char *s1, char *s2)
 	int cont4;
 	char *dest;
 
+	if (s1 == NULL)
+		return (s1[] = "");
+	if (s2 == NULL)
+		return (s2[] = "");
 	for (conts1 = 0 ; s1[conts1] ; conts1++)
 	{}
 	for (conts2 = 0; s2[conts2]; conts2++)
