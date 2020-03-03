@@ -19,9 +19,9 @@ char *str_concat(char *s1, char *s2)
 	char *dest;
 
 	if (s1 == NULL)
-		s1 = '\0';
+		s1 = "";
 	else if (s2 == NULL)
-		s2 = '\0';
+		s2 = "";
 	for (conts1 = 0 ; s1[conts1] ; conts1++)
 	{}
 	for (conts2 = 0; s2[conts2]; conts2++)
