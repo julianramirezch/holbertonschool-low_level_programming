@@ -28,11 +28,13 @@ char *str_concat(char *s1, char *s2)
 	length++;
 
 	dest = malloc(sizeof(char) * length);
+	if(dest == NULL)
+		return(NULL);
 	for (cont3 = 0; cont3 < conts1 && s1[cont3] ; cont3++)
 	{
 		dest[cont3] = s1[cont3];
 	}
-	for (cont4 = 0; cont4 <= conts2 ; cont4++ , cont3++)
+	for (cont4 = 0; cont4 <= conts2 ; cont4++, cont3++)
 	{
 		dest[cont3] = s2[cont4];
 	}
