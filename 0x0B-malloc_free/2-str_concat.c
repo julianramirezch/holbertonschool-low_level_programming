@@ -18,11 +18,9 @@ char *str_concat(char *s1, char *s2)
 	int cont4;
 	char *dest;
 	
-	if (s1 == NULL && s2 == NULL)
-		return(NULL);
 	if (s1 == NULL)
 		s1 = "";
-	else if (s2 == NULL)
+	if (s2 == NULL)
 		s2 = "";
 	for (conts1 = 0 ; s1[conts1] ; conts1++)
 	{}
@@ -39,9 +37,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		dest[cont3] = s1[cont3];
 	}
-	for (cont4 = 0; cont4 <= conts2 ; cont4++, cont3++)
+	for (cont4 = 0; cont4 < conts2 ; cont4++, cont3++)
 	{
 		dest[cont3] = s2[cont4];
 	}
+	dest[cont3] = '\0';
 	return (dest);
 }
