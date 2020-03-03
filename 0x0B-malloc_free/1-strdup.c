@@ -25,5 +25,7 @@ for (cont2 = 0 ; cont2 < cont ; cont2++)
 {
 	str2[cont2] = str[cont2];
 }
+if (str == NULL)
+	return (NULL);
 return (str2);
 }
