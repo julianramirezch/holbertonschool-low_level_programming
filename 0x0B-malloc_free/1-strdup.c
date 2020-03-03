@@ -5,15 +5,15 @@
 /**
  * _strdup- returns a pointer to a newly allocated space in memory.
  * @str: Character.
- * Return:
+ * Return: str
  */
 
 char *_strdup(char *str)
 {
 
-char *str2 = NULL;
 int cont;
 int cont2;
+char *str2;
 
 for (cont = 0; str[cont] != '\0'; cont++)
 {}
@@ -25,5 +25,5 @@ for (cont2 = 0 ; cont2 < cont ; cont2++)
 {
 	str2[cont2] = str[cont2];
 }
-return(str);
+return (str);
 }
