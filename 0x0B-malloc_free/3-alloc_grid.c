@@ -1,4 +1,4 @@
-#include "holberton.h"
+ #include "holberton.h"
 #include <stdlib.h>
 
 /**
@@ -30,7 +30,7 @@ int **alloc_grid(int width, int height)
 		{
 			for (conta = 0 ; conta < contp ; conta++)
 			{
-				free(alloc[contp]);
+				free(alloc[conta]);
 			}
 			free(alloc);
 			return (NULL);
