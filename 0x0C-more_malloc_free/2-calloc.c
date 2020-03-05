@@ -12,13 +12,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *cp;
 	unsigned int cont1;
+	unsigned int size2;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	cp = malloc(size * nmemb);
+	size2 = nmemb * size;
+	cp = malloc(nmemb);
 	if (cp == NULL)
 		return (NULL);
-	for (cont1 = 0; cont1 < nmemb ; cont1++)
+	for (cont1 = 0; cont1 < size2 ; cont1++)
 	{
 		cp[cont1] = '\0';
 	}
