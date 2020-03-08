@@ -16,7 +16,7 @@ int main(void)
 	while (cont <= 50)
 	{
 		if (cont < 50)
-		{	
+		{
 			f3 = f1 + f2;
 			printf("%ld, ", f3);
 		}
