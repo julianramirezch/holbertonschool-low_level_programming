@@ -11,7 +11,7 @@ int main(void)
 	long int f1 = 0;
 	long int f2 = 1;
 	long int f3;
-	int cont = 0;
+	int cont = 1;
 
 	while (cont < 50)
 	{
@@ -20,7 +20,7 @@ int main(void)
 			f3 = f1 + f2;
 			printf("%ld, ", f3);
 		}
-		if (cont == 49)
+		if (cont == 50)
 		{
 			f3 = f1 + f2;
 			printf("%ld\n", f3);
