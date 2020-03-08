@@ -8,19 +8,19 @@
 
 int main(void)
 {
-	long int f1 = 1;
-	long int f2 = 2;
+	long int f1 = 0;
+	long int f2 = 1;
 	long int f3;
 	int cont = 0;
 
-	while (cont <= 50)
+	while (cont < 50)
 	{
 		if (cont < 50)
 		{
 			f3 = f1 + f2;
 			printf("%ld, ", f3);
 		}
-		if (cont == 50)
+		if (cont == 49)
 		{
 			f3 = f1 + f2;
 			printf("%ld\n", f3);
