@@ -13,6 +13,8 @@ int _atoi(char *s)
 	int res = 0;
 	int sign = 1;
 
+	if (s == NULL)
+		return (NULL);
 	for (cont = 0 ; s[cont] ; cont++)
 	{
 		if (s[cont] == 45)
