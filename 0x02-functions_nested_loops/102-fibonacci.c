@@ -13,21 +13,16 @@ int main(void)
 	long int f3;
 	int cont = 1;
 
-	while (cont < 50)
+	while (cont <= 50)
 	{
-		if (cont < 50)
-		{
-			f3 = f1 + f2;
-			printf("%ld, ", f3);
-		}
-		if (cont == 50)
-		{
-			f3 = f1 + f2;
-			printf("%ld\n", f3);
-		}
+		f3 = f1 + f2;
+		cont++;
+		printf("%ld", f3);
+		if (cont <= 50)
+			printf(", ");
 		f1 = f2;
 		f2 = f3;
-		cont++;
 	}
+	printf("\n");
 	return (0);
 }
