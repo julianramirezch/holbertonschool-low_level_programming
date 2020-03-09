@@ -1,6 +1,8 @@
 #ifndef DOG_H
 #define DOG_H
 #include <stdio.h>
+#include <stlid.h>
+
 /**
  * struct dog - new type struct dog.
  * @name: First member
