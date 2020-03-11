@@ -2,7 +2,7 @@
 
 /**
  * print_name - Function prints a name.
- * @name: Char *
+ * @name: Character
  * @f: Pointer to function.
  * Return: void
  */
