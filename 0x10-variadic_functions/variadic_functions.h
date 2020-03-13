@@ -5,9 +5,9 @@
 #include <stdlib.h>
 
 /**
- * struct op - Struct op
+ * struct fmt - Struct fmt
  *
- * @op: The operator
+ * @fmt: Format
  * @f: The function associated
  */
 
