@@ -32,7 +32,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			if (c == NULL)
 				printf("(nil)");
 			else
-				printf ("%s", c);
+				printf("%s", c);
 			if (cont < n - 1)
 			{
 				for (cont2 = 0; separator[cont2] ; cont2++)
@@ -41,7 +41,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				}
 			}
 		}
-		
 	}
 	printf("\n");
 	va_end(ap);
