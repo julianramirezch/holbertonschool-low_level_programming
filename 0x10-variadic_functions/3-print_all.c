@@ -1,24 +1,18 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - function that prints anything
- * @format: List of types of arguments
- * Return: Void;
- */
-
-/**
- * p_char - Print char
+ * p_ch - Print character.
  * @all: valist
- * Return: print char
+ * Return: void
  */
-void p_char(va_list all)
+void p_ch(va_list all)
 {
 	printf("%c", va_arg(all, int));
 }
 /**
  * p_int - Print int
  * @all: valist
- * Return: print int
+ * Return: void
  */
 void p_int(va_list all)
 {
@@ -27,7 +21,7 @@ void p_int(va_list all)
 /**
  * p_float - Print float
  * @all: valist
- * Return: print float
+ * Return: void
  */
 void p_float(va_list all)
 {
@@ -36,13 +30,20 @@ void p_float(va_list all)
 /**
  * p_string - Print string
  * @all: valist
- * Return: print string
+ * Return: void
  */
 void p_string(va_list all)
 {
 	char *s = va_arg(all, char *);
-        printf("%s", s);
+
+	printf("%s", s);
 }
+
+/**
+ * print_all - function that prints anyhing
+ * @format: pointer
+ * Return: Void;
+ */
 
 void print_all(const char * const format, ...)
 {
@@ -50,8 +51,8 @@ void print_all(const char * const format, ...)
 	char *separator = "";
 	int i = 0, j;
 
-	fmt_t fmto[] = {{'c', p_char},{'i', p_int},
-			{'f', p_float},{'s', p_string}};
+	fmt_t fmto[] = {{'c', p_ch}, {'i', p_int},
+			{'f', p_float}, {'s', p_string}};
 	va_start(all, format);
 	while (format[i])
 	{
