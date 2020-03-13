@@ -4,6 +4,19 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ * struct op - Struct op
+ *
+ * @op: The operator
+ * @f: The function associated
+ */
+
+typedef struct fmt
+{
+	char *fmt;
+	int (*f)(int a, int b);
+} fmt_t;
+
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
