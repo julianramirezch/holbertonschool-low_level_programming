@@ -15,17 +15,25 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_list ap;
 
-	if (!separator)
-		return;
 	va_start(ap, n);
+	if (n == 0)
+		return;
 	for (cont = 0; cont < n ; cont++)
 	{
-		c = va_arg(ap, int);
-		printf("%i", c);
-		if (cont < n - 1)
+		if (!separator)
 		{
-			for (cont2 = 0 ; separator[cont2] ; cont2++)
-				printf("%c", separator[cont2]);
+			c = va_arg(ap, int);
+			printf("%i", c);
+		}
+		if (separator)
+		{
+			c = va_arg(ap, int);
+			printf("%i", c);
+			if (cont < n - 1)
+			{
+				for (cont2 = 0 ; separator[cont2] ; cont2++)
+					printf("%c", separator[cont2]);
+			}
 		}
 	}
 	printf("\n");
