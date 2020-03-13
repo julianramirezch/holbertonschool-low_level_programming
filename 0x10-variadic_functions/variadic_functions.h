@@ -14,7 +14,7 @@
 typedef struct fmt
 {
 	char *fmt;
-	int (*f)(int a, int b);
+	void (*f)();
 } fmt_t;
 
 int sum_them_all(const unsigned int n, ...);
