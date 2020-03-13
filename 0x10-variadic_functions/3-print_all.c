@@ -35,7 +35,9 @@ void p_float(va_list all)
 void p_string(va_list all)
 {
 	char *s = va_arg(all, char *);
-
+	if (s == NULL)
+		printf("(nil)");
+	else
 	printf("%s", s);
 }
 
