@@ -11,10 +11,10 @@
  * @f: The function associated
  */
 
-typedef struct fmt
+typedef struct fmto
 {
-	char *fmt;
-	void (*f)();
+	char fomto;
+	void (*f)(va_list all);
 } fmt_t;
 
 int sum_them_all(const unsigned int n, ...);
