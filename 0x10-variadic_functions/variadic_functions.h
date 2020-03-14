@@ -6,7 +6,6 @@
 
 /**
  * struct fmt - Struct fmt
- *
  * @fmt: Format
  * @f: The function associated
  */
