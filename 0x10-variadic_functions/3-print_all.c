@@ -9,6 +9,7 @@ void p_ch(va_list all)
 {
 	printf("%c", va_arg(all, int));
 }
+
 /**
  * p_int - Print int
  * @all: valist
@@ -18,6 +19,7 @@ void p_int(va_list all)
 {
 	printf("%i", va_arg(all, int));
 }
+
 /**
  * p_float - Print float
  * @all: valist
@@ -27,6 +29,7 @@ void p_float(va_list all)
 {
 	printf("%f", va_arg(all, double));
 }
+
 /**
  * p_string - Print string
  * @all: valist
@@ -35,9 +38,9 @@ void p_float(va_list all)
 void p_string(va_list all)
 {
 	char *s = va_arg(all, char *);
+
 	if (s == NULL)
-		printf("(nil)");
-	else
+		s="(nil)";
 	printf("%s", s);
 }
 
@@ -53,10 +56,12 @@ void print_all(const char * const format, ...)
 	char *separator = "";
 	int i = 0, j;
 
-	fmt_t fmto[] = {{'c', p_ch}, {'i', p_int},
-			{'f', p_float}, {'s', p_string}};
+	fmt_t fmto[] = {
+		{'c', p_ch}, {'i', p_int},
+		{'f', p_float}, {'s', p_string}
+	};
 	va_start(all, format);
-	while (format[i])
+	while (format[i] && format)
 	{
 		j = 0;
 		while (j < 5)
