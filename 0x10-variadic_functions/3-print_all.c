@@ -17,7 +17,7 @@ void p_ch(va_list all)
  */
 void p_int(va_list all)
 {
-	printf("%i", va_arg(all, int));
+	printf("%d", va_arg(all, int));
 }
 
 /**
