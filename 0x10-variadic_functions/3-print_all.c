@@ -17,7 +17,7 @@ void p_ch(va_list all)
  */
 void p_int(va_list all)
 {
-	printf("%d", va_arg(all, int));
+	printf("%i", va_arg(all, int));
 }
 
 /**
@@ -67,7 +67,8 @@ void print_all(const char * const format, ...)
 		while (fmto[j].fomto)
 		{
 			if (format[i] == fmto[j].fomto)
-			{	printf("%s", separator);
+			{	
+				printf("%s", separator);
 				fmto[j].f(all);
 				separator = ", ";
 			}
