@@ -74,8 +74,8 @@ void print_all(const char * const format, ...)
 			}
 			j++;
 		}
-		i++;
 		j = 0;
+		i++;
 	}
 	printf("\n");
 	va_end(all);
