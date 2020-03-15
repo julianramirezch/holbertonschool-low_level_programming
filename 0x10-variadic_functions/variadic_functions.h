@@ -5,8 +5,8 @@
 #include <stdlib.h>
 
 /**
- * struct fmt - Struct fmt
- * @fmt: Format
+ * struct fmto - Struct fmt
+ * @fomto: Char
  * @f: The function associated
  */
 
