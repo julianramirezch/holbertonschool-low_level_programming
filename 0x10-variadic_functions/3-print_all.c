@@ -54,7 +54,7 @@ void print_all(const char * const format, ...)
 {
 	fmt_t fmto[] = {
 		{'c', p_ch}, {'i', p_int},
-		{'f', p_float}, {'s', p_string}
+		{'f', p_float}, {'s', p_string},
 		{0, NULL}
 	};
 	int i = 0, j = 0;
@@ -67,7 +67,7 @@ void print_all(const char * const format, ...)
 		while (fmto[j].fomto)
 		{
 			if (format[i] == fmto[j].fomto)
-			{	
+			{
 				printf("%s", separator);
 				fmto[j].f(all);
 				separator = ", ";
