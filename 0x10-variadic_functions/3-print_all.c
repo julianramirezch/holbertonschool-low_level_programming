@@ -62,7 +62,7 @@ void print_all(const char * const format, ...)
 	va_list all;
 
 	va_start(all, format);
-	while (format[i] && format)
+	while (format && format[i])
 	{
 		while (fmto[j].fomto)
 		{
