@@ -63,7 +63,7 @@ void print_all(const char * const format, ...)
 	va_start(all, format);
 	while (format[i] && format)
 	{
-		while (j < 5)
+		while (j < 4)
 		{
 			if (format[i] == fmto[j].fomto)
 			{	printf("%s", separator);
