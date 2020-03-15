@@ -40,7 +40,7 @@ void p_string(va_list all)
 	char *s = va_arg(all, char *);
 
 	if (s == NULL)
-		s="(nil)";
+		s = "(nil)";
 	printf("%s", s);
 }
 
@@ -54,7 +54,7 @@ void print_all(const char * const format, ...)
 {
 	va_list all;
 	char *separator = "";
-	int i = 0, j;
+	int i = 0, j = 0;
 
 	fmt_t fmto[] = {
 		{'c', p_ch}, {'i', p_int},
@@ -63,7 +63,6 @@ void print_all(const char * const format, ...)
 	va_start(all, format);
 	while (format[i] && format)
 	{
-		j = 0;
 		while (j < 5)
 		{
 			if (format[i] == fmto[j].fomto)
@@ -74,6 +73,7 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		i++;
+		j = 0;
 	}
 	printf("\n");
 	va_end(all);
