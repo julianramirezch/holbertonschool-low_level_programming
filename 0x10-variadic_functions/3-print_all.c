@@ -52,14 +52,14 @@ void p_string(va_list all)
 
 void print_all(const char * const format, ...)
 {
-	va_list all;
-	char *separator = "";
-	int i = 0, j = 0;
-
 	fmt_t fmto[] = {
 		{'c', p_ch}, {'i', p_int},
 		{'f', p_float}, {'s', p_string}
 	};
+	int i = 0, j = 0;
+	char *separator = "";
+	va_list all;
+
 	va_start(all, format);
 	while (format[i] && format)
 	{
