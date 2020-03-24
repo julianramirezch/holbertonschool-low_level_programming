@@ -4,7 +4,7 @@
  *delete_nodeint_at_index - deletes the node at index
  * @head: Double pointer
  * @index: index
- * Return: 0
+ * Return: -1
  */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
@@ -35,5 +35,5 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		}
 		aux = aux->next;
 	}
-	return (0);
+	return (-1);
 }
