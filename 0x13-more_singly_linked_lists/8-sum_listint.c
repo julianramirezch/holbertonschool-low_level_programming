@@ -17,8 +17,5 @@ int sum_listint(listint_t *head)
 		sum += (aux->n);
 		aux = aux->next;
 	}
-	if (sum == 0)
-		return (0);
-	else
-		return (sum);
+	return (sum);
 }
