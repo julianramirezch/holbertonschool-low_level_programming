@@ -11,7 +11,7 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 listint_t *aux, *newn, *tmp;
-unsigned int cont, cont2;
+unsigned int cont;
 
 if (*head == NULL)
 	return (NULL);
@@ -21,28 +21,21 @@ if (newn == NULL)
 newn->n = n;
 newn->next = NULL;
 aux = *head;
+tmp = *head;
 if (idx == 0)
 {
 	newn->next = *head;
 	*head = newn;
 }
-if (idx > 0)
+for (cont = 0; aux; cont++)
 {
-	for (cont = 0; aux; cont++)
+	aux = aux->next;
+	if (cont == (idx - 1))
 	{
-		if (cont == idx)
-		{
-			newn->next = aux;
-			tmp = *head;
-			for (cont2 = 0; tmp; cont2++)
-			{
-				if (cont2 == (idx - 1))
-					tmp->next = newn;
-				tmp = tmp->next;
-			}
-		}
-		aux = aux->next;
+		newn->next = aux;
+		tmp->next = newn;
 	}
+	tmp = tmp->next;
 }
 return (newn);
 }
