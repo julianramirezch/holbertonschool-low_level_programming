@@ -37,5 +37,10 @@ for (cont = 0; aux; cont++)
 	}
 	tmp = tmp->next;
 }
+if (idx > cont)
+{
+	free(newn);
+	return (NULL);
+}
 return (newn);
 }
