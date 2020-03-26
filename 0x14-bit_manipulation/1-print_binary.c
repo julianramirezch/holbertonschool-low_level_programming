@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 	unsigned long int base = 0;
 	unsigned long int cont = 0, cont2, bin;
 
-	while (base <= n)
+	while (base < n)
 	{
 		if (cont == 0)
 			base = 1;
