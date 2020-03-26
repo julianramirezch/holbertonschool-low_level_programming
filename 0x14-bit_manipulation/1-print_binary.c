@@ -8,7 +8,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int base = 0;
-	long int cont = 0, cont2, bin;
+	unsigned long int cont = 0, cont2, bin;
 
 	while (base <= n)
 	{
