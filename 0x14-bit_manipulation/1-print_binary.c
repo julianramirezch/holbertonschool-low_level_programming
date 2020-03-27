@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 	unsigned long int cont = 0, cont2, bin = 0;
 
 	if (n == 0)
-	{	
+	{
 		_putchar(48);
 		return;
 	}
