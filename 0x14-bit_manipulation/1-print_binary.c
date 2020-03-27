@@ -10,6 +10,8 @@ void print_binary(unsigned long int n)
 	unsigned long int base = 0;
 	unsigned long int cont = 0, cont2, bin = 0;
 
+	if (n == 0)
+		_putchar(48);
 	while (base < n)
 	{
 		if (cont == 0)
@@ -20,9 +22,6 @@ void print_binary(unsigned long int n)
 			break;
 		cont++;
 	}
-
-	if (n == 0)
-		_putchar(48);
 
 	for (cont2 = 0; cont > 0; cont2++)
 	{
