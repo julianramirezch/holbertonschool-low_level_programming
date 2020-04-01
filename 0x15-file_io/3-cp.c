@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 {
 	int ff, ft;
 	char buffer[1024];
-	ssize_t readp, writep, closepff, closepft;
+	ssize_t readp, writep;
 
 	if (argc < 3)
 	{
@@ -42,14 +42,12 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
 		exit(99);
 	}
-	closepff = close(ff);
-	if (closepff == -1)
+	if (close(ff) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", ff);
 		exit(100);
 	}
-	closepft = close(ft);
-	if (closepft == -1)
+	if (close(ft) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", ft);
 		exit(100);
