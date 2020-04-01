@@ -3,7 +3,7 @@
 
 /**
  * main -  program that copies the content of a file to another file.
- * @ac: Number or arguments.
+ * @ac: Number or arguments
  * @av: Arguments
  * Return: 0 on success
  */
