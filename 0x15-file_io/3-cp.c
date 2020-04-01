@@ -21,7 +21,7 @@ int main(int ac, char **av)
 	ft = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (ft == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-	while (readp = 1024)
+	while (readp == 1024)
 	{
 		readp = read(ff, buffer, sizeof(buffer));
 		if (readp == -1)
