@@ -20,23 +20,17 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]), exit(98);
 	ft = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (ft == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]), exit(99);
-	}
 	while (readp)
 	{
 		readp = read(ff, buffer, sizeof(buffer));
 		if (readp == -1)
-		{
 			dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]), exit(98);
-		}
-		else
+		if (readp > 0)
 		{
 			writep = write(ft, buffer, readp);
 			if (writep == -1)
-			{
 				dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]), exit(99);
-			}
 		}
 	}
 	closeff = close(ff);
