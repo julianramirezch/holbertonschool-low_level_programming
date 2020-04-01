@@ -1,9 +1,10 @@
 #include  "holberton.h"
+#include <stdio.h>
 
 /**
  * main -  program that copies the content of a file to another file.
- * @argc: Number or arguments.
- * @argv: Arguments
+ * @ac: Number or arguments.
+ * @av: Arguments
  * Return: 0 on success
  */
 
@@ -13,7 +14,10 @@ int main(int ac, char **av)
 	char buffer[1024];
 
 	if (ac != 3)
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
 	ff = open(av[1], O_RDONLY);
 	if (ff == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", av[1]), exit(98);
@@ -25,12 +29,9 @@ int main(int ac, char **av)
 		readp = read(ff, buffer, 1024);
 		if (readp == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from %s\n", av[1]), exit(98);
-		if (readp > 0)
-		{
-			writep = write(ft, buffer, readp);
-			if (writep == -1)
-				dprintf(STDERR_FILENO, "Error: Can't write to %s", av[2]), exit(99);
-		}
+		writep = write(ft, buffer, readp);
+		if (writep == -1)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s", av[2]), exit(99);
 	}
 	closeff = close(ff);
 	closeft = close(ft);
