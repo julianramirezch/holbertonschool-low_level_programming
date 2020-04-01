@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 	int ff, ft, readp = 1, writep, closeff, closeft;
 	char buffer[1024];
 
-	if (argc < 3)
+	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	ff = open(argv[1], O_RDONLY);
 	if (ff == -1)
