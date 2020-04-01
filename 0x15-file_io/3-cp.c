@@ -11,7 +11,7 @@ int main(int ac, char **av)
 {
 	int ff, ft;
 	char buffer[1024];
-	ssize_t writep, readp = 1, closeff, closeft;
+	ssize_t writep, readp = 1024, closeff, closeft;
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -21,7 +21,7 @@ int main(int ac, char **av)
 	ft = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (ft == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-	while (readp)
+	while (readp = 1024)
 	{
 		readp = read(ff, buffer, sizeof(buffer));
 		if (readp == -1)
