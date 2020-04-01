@@ -9,9 +9,10 @@
 
 int main(int argc, char **argv)
 {
-	int ff, ft, readp = 1, writep, closeff, closeft;
+	int ff, ft, readp, writep, closeff, closeft;
 	char buffer[1024];
 
+	readp = sizeof(buffer);
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	ff = open(argv[1], O_RDONLY);
@@ -20,7 +21,7 @@ int main(int argc, char **argv)
 	ft = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (ft == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]), exit(99);
-	while (readp)
+	while (readp == 1024)
 	{
 		readp = read(ff, buffer, sizeof(buffer));
 		if (readp == -1)
