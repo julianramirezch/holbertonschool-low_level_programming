@@ -18,8 +18,6 @@ char *_strstr(char *haystack, char *needle)
 	{};
 	for (cont = 0; haystack[cont]; cont++)
 	{
-		if(needle[cont2] != ' ')
-			return (" ");
 		if (haystack[cont] == needle[cont2])
 		{
 			*pos += cont;
