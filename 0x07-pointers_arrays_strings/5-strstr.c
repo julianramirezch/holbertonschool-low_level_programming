@@ -14,8 +14,6 @@ char *_strstr(char *haystack, char *needle)
 	int num = 0, len;
 
 	pos = &index;
-	if (needle[0] == '\0')
-		return ("");
 	for (len = 0; needle[len]; len++)
 	{};
 	for (cont = 0; haystack[cont]; cont++)
@@ -34,6 +32,8 @@ char *_strstr(char *haystack, char *needle)
 				}
 			}
 		}
+		if (needle[0] == '\0')
+			return ("\0");
 		if (num == len)
 		return (haystack + cont);
 	}
