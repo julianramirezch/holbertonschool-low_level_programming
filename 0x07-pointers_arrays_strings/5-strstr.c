@@ -35,5 +35,5 @@ char *_strstr(char *haystack, char *needle)
 		if (num == len)
 		return (haystack + cont);
 	}
-	return (haystack + cont);
+	return ("nil");
 }
