@@ -43,11 +43,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		if (aux->next == NULL)
 		{
 			free(newn);
-			return (add_dnodeint_end(h, n));
+			if (cont + 2 == idx)
+				return (add_dnodeint_end(h, n));
+			break;
 		}
 		tmp = tmp->next;
 		cont++;
 	}
+
 	if (idx > cont)
 	{	free(newn);
 		return (NULL); }
