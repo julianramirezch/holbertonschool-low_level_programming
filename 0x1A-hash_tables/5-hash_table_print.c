@@ -23,7 +23,7 @@ void hash_table_print(const hash_table_t *ht)
 		cast_key = (const unsigned char *) tmp->key;
 		last_index = key_index(cast_key, size);
 	}
-	
+
 	printf("{");
 	for (index = 0; index < size; index++)
 	{
