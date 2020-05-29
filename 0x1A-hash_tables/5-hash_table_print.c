@@ -24,12 +24,14 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	for (index = 0; index < size; index++)
 	{
-		if (ht->array[index] == NULL)
-			continue;
 		aux = ht->array[index];
-		printf("'%s': '%s'", aux->key, aux->value);
-		if (index != last_index)
-			printf(", ");
+		while(aux)
+		{	
+			printf("'%s': '%s'", aux->key, aux->value);
+			if (index != last_index)
+				printf(", ");
+			aux = aux->next;
+		}
 	}
 	printf("}");
 	printf("\n");
