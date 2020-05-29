@@ -7,9 +7,9 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-	int index = 0, cont;
+	unsigned long int index = 0, cont;
 	hash_node_t *tmp, *aux;
-	int size = ht->size;
+	unsigned long int size = ht->size;
 
 	if (ht == NULL)
 		return;
