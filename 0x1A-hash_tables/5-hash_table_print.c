@@ -21,7 +21,7 @@ void hash_table_print(const hash_table_t *ht)
 		tmp = ht->array[cont];
 		last_index = key_index((const unsigned char *) tmp->key, size);
 	}
-	putchar('{');
+	printf("{");
 	for (index = 0; index < size; index++)
 	{
 		if (ht->array[index] == NULL)
@@ -30,6 +30,6 @@ void hash_table_print(const hash_table_t *ht)
 		if (index != last_index)
 			printf(", ");
 	}
-	putchar('}');
-	putchar('\n');
+	printf("}");
+	printf("\n");
 }
