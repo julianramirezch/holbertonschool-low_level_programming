@@ -8,7 +8,7 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	int index = 0, last_index, cont;
-	hash_node_t *tmp;
+	hash_node_t *tmp, *aux;
 	int size = ht->size;
 
 	if (ht == NULL)
@@ -26,7 +26,8 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (ht->array[index] == NULL)
 			continue;
-		printf("'%s': '%s'", ht->array[index]->key, ht->array[index]->value);
+		aux = ht->array[index];
+		printf("'%s': '%s'", aux->key, aux->value);
 		if (index != last_index)
 			printf(", ");
 	}
