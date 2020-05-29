@@ -31,7 +31,7 @@ void hash_table_print(const hash_table_t *ht)
 		while (aux)
 		{
 			printf("'%s': '%s'", aux->key, aux->value);
-			if (index != last_index)
+			if (ht->array[index] != ht->array[last_index])
 				printf(", ");
 			aux = aux->next;
 		}
