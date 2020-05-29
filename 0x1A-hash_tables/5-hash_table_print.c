@@ -14,7 +14,7 @@ void hash_table_print(const hash_table_t *ht)
 	if (ht == NULL)
 		return;
 
-	for (cont = size ; cont != 0 ; cont--)
+	for (cont = size - 1 ; cont != 0 ; cont--)
 	{
 		tmp = ht->array[cont];
 		if (tmp != NULL)
