@@ -25,8 +25,8 @@ void hash_table_print(const hash_table_t *ht)
 	for (index = 0; index < size; index++)
 	{
 		aux = ht->array[index];
-		while(aux)
-		{	
+		while (aux)
+		{
 			printf("'%s': '%s'", aux->key, aux->value);
 			if (index != last_index)
 				printf(", ");
