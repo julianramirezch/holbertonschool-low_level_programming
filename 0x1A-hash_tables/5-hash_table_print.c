@@ -7,21 +7,18 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-	int index = 0, last_index, cont;
+	int index = 0, cont;
 	hash_node_t *tmp, *aux;
 	int size = ht->size;
-	const unsigned char *cast_key;
 
 	if (ht == NULL)
 		return;
 
-	for (cont = 0; cont < size; cont++)
+	for (cont = size - 1 ; cont != 0 ; cont--)
 	{
-		if (ht->array[cont] == NULL)
-			continue;
 		tmp = ht->array[cont];
-		cast_key = (const unsigned char *) tmp->key;
-		last_index = key_index(cast_key, size);
+		if (tmp != NULL)
+			break;
 	}
 
 	printf("{");
@@ -31,12 +28,11 @@ void hash_table_print(const hash_table_t *ht)
 		while (aux)
 		{
 			printf("'%s': '%s'", aux->key, aux->value);
-			if (index != last_index)
+			if (aux != tmp)
 				printf(", ");
 			aux = aux->next;
 		}
 	}
-
 	printf("}");
 	printf("\n");
 }
