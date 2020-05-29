@@ -7,19 +7,18 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int index = 0, cont;
+	unsigned long int index = 0, cont, last_index;
 	hash_node_t *tmp, *aux;
 
 	if (ht == NULL)
 		return;
 
-	cont = (ht->size) - 1;
-	while (cont != 0)
+	for (cont = 0; cont < ht->size ; cont++)
 	{
+		if (ht->array[cont] == NULL)
+			continue;
 		tmp = ht->array[cont];
-		if (tmp != NULL)
-			break;
-		cont--;
+		last_index = key_index((const unsigned char *) tmp->key, ht->size);
 	}
 
 	printf("{");
@@ -29,7 +28,7 @@ void hash_table_print(const hash_table_t *ht)
 		while (aux)
 		{
 			printf("'%s': '%s'", aux->key, aux->value);
-			if (aux != tmp)
+			if (index !=  last_index)
 				printf(", ");
 			aux = aux->next;
 		}
