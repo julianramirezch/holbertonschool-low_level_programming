@@ -1,11 +1,10 @@
 CC=gcc
-SRC=main.c holberton.c
+SRC=main.c holberton.c m.h
 OBJ=$(SRC:%.c=%.o)
 NAME=holberton
-RM=rm
 .PHONY= all clean oclean fclean re
 CFLAGS=-Wall -Werror -Wextra -pedantic
-all: m.h $(OBJ)
+all: $(OBJ)
 	$(CC) -o $(NAME) $(SRC)
 clean:
 	$(RM) -f *~ $(NAME)
@@ -14,6 +13,6 @@ oclean:
 fclean:
 	clean
 	oclean
-re: 
+re: $(OBJ)
 	oclean
 	all
