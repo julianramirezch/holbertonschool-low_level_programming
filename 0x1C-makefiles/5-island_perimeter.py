@@ -7,8 +7,9 @@ def island_perimeter(grid):
     y = 0
     x = 0
     for i in grid:
-        if i.count(1):
-            y += 1
-            if x < i.count(1):
-                x = i.count(1)
+        if len(i) != 0:
+            if i.count(1):
+                y += 1
+                if x < i.count(1):
+                    x = i.count(1)
     return (2 * x) + (2 * y)
