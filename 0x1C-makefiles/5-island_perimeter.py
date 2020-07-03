@@ -4,11 +4,14 @@
 
 def island_perimeter(grid):
     """ returns the perimeter of the island described in grid """
-    island = []
-    total = 0
-    num = 0
-    for i in grid:
-        if i.count(1):
-            num += i.count(1)
-    perimeter = ((num - 2) * 2) + 6
-    return(perimeter)
+    y = 0
+    x = 0
+    len_row = 0
+    if len(grid) <= 100:
+        for i in grid:
+            if len(i) != 0 and len(i) <= 100:
+                if i.count(1):
+                    y += 1
+                    if x < i.count(1):
+                        x = i.count(1)
+    return (2 * x) + (2 * y)
